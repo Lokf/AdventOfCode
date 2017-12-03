@@ -40,6 +40,12 @@ namespace Job
             Console.WriteLine($"Task2: {Day2.Task2(speadsheet)}");
             Console.WriteLine();
 
+            var square = 361527;
+            Console.WriteLine("Day 3:");
+            Console.WriteLine($"Task1: {Day3.Task1(square)}");
+            Console.WriteLine($"Task2: {Day3.Task2(square)}");
+            Console.WriteLine();
+
             Console.ReadLine();
         }
     }
