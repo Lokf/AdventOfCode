@@ -24,35 +24,21 @@ namespace AdventOfCode
         private static bool IsValidPassphrase1(string passphrase)
         {         
             var words = passphrase.Split(" ");
-            var distinctWords = new HashSet<string>(words.Count());
+            var distinctWords = new HashSet<string>(words.Length);
 
-            foreach(var word in words)
-            {
-                var isDistinct = distinctWords.Add(word);
-                if (!isDistinct)
-                {
-                    return false;
-                }
-            }
-
-            return true;
+            return words
+                .Select(word => distinctWords.Add(word))
+                .All(isDistinct => isDistinct);
         }
 
         private static bool IsValidPassphrase2(string passphrase)
         {
             var words = passphrase.Split(" ");
-            var distinctWords = new HashSet<string>(words.Count());
+            var distinctWords = new HashSet<string>(words.Length);
 
-            foreach (var word in words)
-            {
-                var isDistinct = distinctWords.Add(string.Concat(word.OrderBy(character => character)));
-                if (!isDistinct)
-                {
-                    return false;
-                }
-            }
-
-            return true;
+            return words
+                .Select(word => distinctWords.Add(string.Concat(word.OrderBy(character => character))))
+                .All(isDistinct => isDistinct);
         }
     }
 }
