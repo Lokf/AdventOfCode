@@ -48,6 +48,14 @@ namespace Job
             Console.WriteLine($"Task2: {Day5.Task2(jumpOffsets)}");
             Console.WriteLine();
 
+            var kalle = File
+                .ReadAllLines("Day6.txt")
+                .ToList();
+            Console.WriteLine("Day 6:");
+            Console.WriteLine($"Task1: {Day6.Task1()}");
+            Console.WriteLine($"Task2: {Day6.Task2()}");
+            Console.WriteLine();
+
             Console.ReadLine();
         }
     }
