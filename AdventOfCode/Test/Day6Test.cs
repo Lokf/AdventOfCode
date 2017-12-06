@@ -10,13 +10,13 @@ namespace Test
         [TestMethod]
         public void Task1()
         {
-            Assert.AreEqual(0, Day6.Task1());
+            Assert.AreEqual(5, Day6.Task1("0    2   7   0"));
         }
 
         [TestMethod]
         public void Task2()
         {
-            Assert.AreEqual(0, Day6.Task2());
+            Assert.AreEqual(4, Day6.Task2("0    2   7   0"));
         }
     }
 }
