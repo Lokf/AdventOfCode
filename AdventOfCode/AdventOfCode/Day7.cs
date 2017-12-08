@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading;
 
 namespace AdventOfCode
 {
@@ -25,39 +21,44 @@ namespace AdventOfCode
                 .Select(ParseLine)
                 .ToList();
 
+            Kalle(kalle);
+
             var root = Root(kalle);
 
-            return 0;
+            var root2 = kalle.First(f => f.Name == root);
+
+            return Kalle(root2).correct;
         }
 
-        private static int Kalle(Tower root)
+        private static (int weight, int subTowersWeight, int correct) Kalle(Tower root)
         {
             if (!root.SubTowers.Any())
             {
-                return 0;
+                return (root.Weight, 0, 0);
             }
 
-            var weights = root.SubTowers.Select(t => t.Weight).ToList();
+            var weights = root.SubTowers.Select(Kalle).ToList();
 
-            if (weights.Distinct().Count() == 1)
+            if (weights.Select(t => t.correct).Max() > 0)
             {
-                return root.SubTowers.Select(Kalle).Sum();
+                return (0, 0, weights.Select(t => t.correct).Max());
             }
 
-            var kalle = new Dictionary<int, int>();
-            foreach (var weight in weights)
+            if (weights.Select(t => t.subTowersWeight + t.weight).Distinct().Count() == 1)
             {
-                if (kalle.TryGetValue(weight, out var a))
-                {
-                    kalle[weight]++;
-                }
-                else
-                {
-                    kalle.Add(weight, 1);
-                }
+                return (root.Weight, weights.Select(t => t.subTowersWeight + t.weight).Sum(), weights.Select(t => t.correct).Max());
             }
 
-            return kalle.First(x => x.Value > 1).Value;
+            var most = weights
+                .Select(t => t.subTowersWeight + t.weight)
+                .GroupBy(i => i)
+                .OrderByDescending(grp => grp.Count())
+                .Select(grp => grp.Key)
+                .First();
+
+            var a = weights.Single(t => t.subTowersWeight + t.weight != most);
+
+            return (root.Weight, weights.Select(t => t.subTowersWeight + t.weight).Sum(), most - a.subTowersWeight);
         }
 
         private static string Root(List<Tower> towers)
