@@ -70,6 +70,13 @@ namespace Job
             Console.WriteLine($"Task2: {Day8.Task2(instructions)}");
             Console.WriteLine();
 
+            var stream = File
+               .ReadAllText("Day9.txt");
+            Console.WriteLine("Day 9:");
+            Console.WriteLine($"Task1: {Day9.Task1(stream)}");
+            Console.WriteLine($"Task2: {Day9.Task2(stream)}");
+            Console.WriteLine();
+
             Console.ReadLine();
         }
     }
