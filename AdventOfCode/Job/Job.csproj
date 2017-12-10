@@ -6,31 +6,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Day2.txt" />
-    <None Remove="Day4.txt" />
-    <None Remove="Day5.txt" />
-    <None Remove="Day7.txt" />
-    <None Remove="Day8.txt" />
-    <None Remove="Day9.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="Day2.txt">
+    <Content Include="Day02.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day4.txt">
+    <Content Include="Day04.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day5.txt">
+    <Content Include="Day05.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day7.txt">
+    <Content Include="Day07.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day8.txt">
+    <Content Include="Day08.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Day9.txt">
+    <Content Include="Day09.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace AdventOfCode
 {
-    public class Day7
+    public class Day07
     {
         public static string Task1(List<string> towers)
         {

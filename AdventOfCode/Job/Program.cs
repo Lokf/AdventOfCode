@@ -14,67 +14,67 @@ namespace Job
 
             var captha = "5255443714755555317777152441826784321918285999594221531636242944998363716119294845838579943562543247239969555791772392681567883449837982119239536325341263524415397123824358467891963762948723327774545715851542429832119179139914471523515332247317441719184556891362179267368325486642376685657759623876854958721636574219871249645773738597751429959437466876166273755524873351452951411628479352522367714269718514838933283861425982562854845471512652555633922878128558926123935941858532446378815929573452775348599693982834699757734714187831337546474515678577158721751921562145591166634279699299418269158557557996583881642468274618196335267342897498486869925262896125146867124596587989531495891646681528259624674792728146526849711139146268799436334618974547539561587581268886449291817335232859391493839167111246376493191985145848531829344198536568987996894226585837348372958959535969651573516542581144462536574953764413723147957237298324458181291167587791714172674717898567269547766636143732438694473231473258452166457194797819423528139157452148236943283374193561963393846385622218535952591588353565319432285579711881559343544515461962846879685879431767963975654347569385354482226341261768547328749947163864645168428953445396361398873536434931823635522467754782422557998262858297563862492652464526366171218276176258582444923497181776129436396397333976215976731542182878979389362297155819461685361676414725597335759976285597713332688275241271664658286868697167515329811831234324698345159949135474463624749624626518247831448143876183133814263977611564339865466321244399177464822649611969896344874381978986453566979762911155931362394192663943526834148596342268321563885255765614418141828934971927998994739769141789185165461976425151855846739959338649499379657223196885539386154935586794548365861759354865453211721551776997576289811595654171672259129335243531518228282393326395241242185795828261319215164262237957743232558971289145639852148197184265766291885259847236646615935963759631145338159257538114359781854685695429348428884248972177278361353814766653996675994784195827214295462389532422825696456457332417366426619555";
             Console.WriteLine("Day 1:");
-            Console.WriteLine($"Task 1: {Day1.Task1(captha)}");
-            Console.WriteLine($"Task 2: {Day1.Task2(captha)}");
+            Console.WriteLine($"Task 1: {Day01.Task1(captha)}");
+            Console.WriteLine($"Task 2: {Day01.Task2(captha)}");
             Console.WriteLine();
             
             var speadsheet = File
-                .ReadAllLines("Day2.txt")
+                .ReadAllLines("Day02.txt")
                 .ToList();
             Console.WriteLine("Day 2:");
-            Console.WriteLine($"Task1: {Day2.Task1(speadsheet)}");
-            Console.WriteLine($"Task2: {Day2.Task2(speadsheet)}");
+            Console.WriteLine($"Task1: {Day02.Task1(speadsheet)}");
+            Console.WriteLine($"Task2: {Day02.Task2(speadsheet)}");
             Console.WriteLine();
 
             var square = 361527;
             Console.WriteLine("Day 3:");
-            Console.WriteLine($"Task1: {Day3.Task1(square)}");
-            Console.WriteLine($"Task2: {Day3.Task2(square)}");
+            Console.WriteLine($"Task1: {Day03.Task1(square)}");
+            Console.WriteLine($"Task2: {Day03.Task2(square)}");
             Console.WriteLine();
 
             var passphrases = File
-                .ReadAllLines("Day4.txt")
+                .ReadAllLines("Day04.txt")
                 .ToList();
             Console.WriteLine("Day 4:");
-            Console.WriteLine($"Task1: {Day4.Task1(passphrases)}");
-            Console.WriteLine($"Task2: {Day4.Task2(passphrases)}");
+            Console.WriteLine($"Task1: {Day04.Task1(passphrases)}");
+            Console.WriteLine($"Task2: {Day04.Task2(passphrases)}");
             Console.WriteLine();
 
             var jumpOffsets = File
-                .ReadAllLines("Day5.txt")
+                .ReadAllLines("Day05.txt")
                 .ToList();
             Console.WriteLine("Day 5:");
-            Console.WriteLine($"Task1: {Day5.Task1(jumpOffsets)}");
-            Console.WriteLine($"Task2: {Day5.Task2(jumpOffsets)}");
+            Console.WriteLine($"Task1: {Day05.Task1(jumpOffsets)}");
+            Console.WriteLine($"Task2: {Day05.Task2(jumpOffsets)}");
             Console.WriteLine();
 
             var blockDistribution = "2	8	8	5	4	2	3	1	5	5	1	2	15	13	5	14";
             Console.WriteLine("Day 6:");
-            Console.WriteLine($"Task1: {Day6.Task1(blockDistribution)}");
-            Console.WriteLine($"Task2: {Day6.Task2(blockDistribution)}");
+            Console.WriteLine($"Task1: {Day06.Task1(blockDistribution)}");
+            Console.WriteLine($"Task2: {Day06.Task2(blockDistribution)}");
             Console.WriteLine();
 
             var towers = File
-                .ReadAllLines("Day7.txt")
+                .ReadAllLines("Day07.txt")
                 .ToList();
             Console.WriteLine("Day 7:");
-            Console.WriteLine($"Task1: {Day7.Task1(towers)}");
-            Console.WriteLine($"Task2: {Day7.Task2(towers)}");
+            Console.WriteLine($"Task1: {Day07.Task1(towers)}");
+            Console.WriteLine($"Task2: {Day07.Task2(towers)}");
             Console.WriteLine();
 
             var instructions = File
-               .ReadAllLines("Day8.txt")
+               .ReadAllLines("Day08.txt")
                .ToList();
             Console.WriteLine("Day 8:");
-            Console.WriteLine($"Task1: {Day8.Task1(instructions)}");
-            Console.WriteLine($"Task2: {Day8.Task2(instructions)}");
+            Console.WriteLine($"Task1: {Day08.Task1(instructions)}");
+            Console.WriteLine($"Task2: {Day08.Task2(instructions)}");
             Console.WriteLine();
 
             var stream = File
-               .ReadAllText("Day9.txt");
+               .ReadAllText("Day09.txt");
             Console.WriteLine("Day 9:");
-            Console.WriteLine($"Task1: {Day9.Task1(stream)}");
-            Console.WriteLine($"Task2: {Day9.Task2(stream)}");
+            Console.WriteLine($"Task1: {Day09.Task1(stream)}");
+            Console.WriteLine($"Task2: {Day09.Task2(stream)}");
             Console.WriteLine();
 
             var lengths = "192,69,168,160,78,1,166,28,0,83,198,2,254,255,41,12"

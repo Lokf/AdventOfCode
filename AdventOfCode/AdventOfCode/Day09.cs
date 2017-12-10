@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AdventOfCode
 {
-    public class Day9
+    public class Day09
     {
         public static int Task1(string stream)
         {

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace Test
 {
     [TestClass]
-    public class Day8Test
+    public class Day08Test
     {
         [TestMethod]
         public void Task1()
@@ -18,7 +18,7 @@ namespace Test
                 "c inc -20 if c == 10"
             };
 
-            Assert.AreEqual(1, Day8.Task1(instructions));
+            Assert.AreEqual(1, Day08.Task1(instructions));
         }
 
         [TestMethod]
@@ -32,7 +32,7 @@ namespace Test
                 "c inc -20 if c == 10"
             };
 
-            Assert.AreEqual(10, Day8.Task2(instructions));
+            Assert.AreEqual(10, Day08.Task2(instructions));
         }
     }
 }

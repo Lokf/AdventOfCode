@@ -5,7 +5,7 @@ using System.Collections.Generic;
 namespace Test
 {
     [TestClass]
-    public class Day2Test
+    public class Day02Test
     {
         [TestMethod]
         public void Task1()
@@ -17,7 +17,7 @@ namespace Test
                 "2 4 6 8"
             };
 
-            Assert.AreEqual(18, Day2.Task1(spreadsheat));
+            Assert.AreEqual(18, Day02.Task1(spreadsheat));
         }
 
         [TestMethod]
@@ -30,7 +30,7 @@ namespace Test
                 "3 8 6 5"
             };
 
-            Assert.AreEqual(9, Day2.Task2(spreadsheat));
+            Assert.AreEqual(9, Day02.Task2(spreadsheat));
         }
     }
 }

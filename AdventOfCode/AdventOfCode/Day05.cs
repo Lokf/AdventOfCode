@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AdventOfCode
 {
-    public class Day5
+    public class Day05
     {
         public static int Task1(List<string> jumpOffsets)
         {

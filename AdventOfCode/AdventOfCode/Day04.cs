@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AdventOfCode
 {
-    public class Day4
+    public class Day04
     {
         public static int Task1(List<string> passphrases)
         {

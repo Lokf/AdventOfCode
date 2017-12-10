@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace AdventOfCode
 {
-    public class Day1
+    public class Day01
     {
         public static int Task1(string captha)
         {

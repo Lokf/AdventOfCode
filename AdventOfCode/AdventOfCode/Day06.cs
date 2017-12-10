@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace AdventOfCode
 {
-    public class Day6
+    public class Day06
     {
         public static int Task1(string blockDistribution)
         {

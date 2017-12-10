@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AdventOfCode
 {
-    public class Day8
+    public class Day08
     {
         public static int max = 0;
 
