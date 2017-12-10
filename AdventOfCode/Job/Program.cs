@@ -77,6 +77,16 @@ namespace Job
             Console.WriteLine($"Task2: {Day9.Task2(stream)}");
             Console.WriteLine();
 
+            var lengths = "192,69,168,160,78,1,166,28,0,83,198,2,254,255,41,12"
+                .Split(',')
+                .Select(x => int.Parse(x))
+                .ToList();
+            var lengths2 = "192,69,168,160,78,1,166,28,0,83,198,2,254,255,41,12".ToCharArray();
+            Console.WriteLine("Day 10:");
+            Console.WriteLine($"Task1: {Day10.Task1(lengths, 256)}");
+            Console.WriteLine($"Task2: {Day10.Task2(lengths2, 256)}");
+            Console.WriteLine();
+
             Console.ReadLine();
         }
     }
