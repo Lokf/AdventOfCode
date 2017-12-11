@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace AdventOfCode
 {
@@ -30,10 +28,9 @@ namespace AdventOfCode
 
             trueLenghts.AddRange(new List<int> { 17, 31, 73, 47, 23 });
             
-
             var position = 0;
             var skipSize = 0;
-            for (int i = 0; i < 64; i++)
+            for (var i = 0; i < 64; i++)
             {                
                 (position, skipSize) = KnotHash(list, trueLenghts, position, skipSize);
             }
@@ -45,7 +42,7 @@ namespace AdventOfCode
         private static int[] DenseHash(int[] sparseHash)
         {
             var denseHash = new int[16];
-            for (int i = 0; i < 16; i++)
+            for (var i = 0; i < 16; i++)
             {
                 denseHash[i] = sparseHash
                     .Skip(i * 16)

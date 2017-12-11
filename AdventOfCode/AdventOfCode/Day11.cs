@@ -32,12 +32,12 @@ namespace AdventOfCode
 
         private class Journey
         {
-            public int North { get; private set; }
-            public int Northeast { get; private set; }
-            public int Southeast { get; private set; }
-            public int South { get; private set; }
-            public int Southwest { get; private set; }
-            public int Northwest { get; private set; }
+            private int North { get; set; }
+            private int Northeast { get; set; }
+            private int Southeast { get; set; }
+            private int South { get; set; }
+            private int Southwest { get; set; }
+            private int Northwest { get; set; }
 
             public void Travel(string stage)
             {
