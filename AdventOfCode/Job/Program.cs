@@ -95,6 +95,14 @@ namespace Job
             Console.WriteLine($"Task2: {Day11.Task2(path)}");
             Console.WriteLine();
 
+            var pipes = File
+               .ReadAllLines("Day12.txt")
+               .ToList();
+            Console.WriteLine("Day 12:");
+            Console.WriteLine($"Task1: {Day12.Task1(pipes)}");
+            Console.WriteLine($"Task2: {Day12.Task2(pipes)}");
+            Console.WriteLine();
+
             Console.ReadLine();
         }
     }
