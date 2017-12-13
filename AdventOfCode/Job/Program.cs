@@ -103,6 +103,14 @@ namespace Job
             Console.WriteLine($"Task2: {Day12.Task2(pipes)}");
             Console.WriteLine();
 
+            var layers = File
+               .ReadAllLines("Day13.txt")
+               .ToList();
+            Console.WriteLine("Day 13:");
+            Console.WriteLine($"Task1: {Day13.Task1(layers)}");
+            Console.WriteLine($"Task2: {Day13.Task2(layers)}");
+            Console.WriteLine();
+
             Console.ReadLine();
         }
     }

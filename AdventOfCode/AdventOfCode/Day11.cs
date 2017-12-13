@@ -68,8 +68,7 @@ namespace AdventOfCode
             {
                 var longitude = Math.Abs(Northwest + Southwest - Northeast - Southeast);
                 var latitude = Math.Abs(2 * North + Northwest + Northeast - 2 * South - Southeast - Southwest);
-
-                return longitude + (latitude - longitude) / 2;               
+                return longitude + (latitude > longitude ? (latitude - longitude) / 2 : 0);               
             }
         }
     }

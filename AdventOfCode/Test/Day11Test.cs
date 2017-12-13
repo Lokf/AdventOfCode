@@ -15,6 +15,7 @@ namespace Test
             Assert.AreEqual(0, Day11.Task1("ne,ne,sw,sw".Split(',').ToList()));
             Assert.AreEqual(2, Day11.Task1("ne,ne,s,s".Split(',').ToList()));
             Assert.AreEqual(3, Day11.Task1("se,sw,se,sw,sw".Split(',').ToList()));
+            Assert.AreEqual(2, Day11.Task1("nw,sw".Split(',').ToList()));
         }
 
         [TestMethod]
