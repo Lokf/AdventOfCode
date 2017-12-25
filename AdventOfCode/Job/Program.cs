@@ -111,6 +111,12 @@ namespace Job
             Console.WriteLine($"Task2: {Day13.Task2(layers)}");
             Console.WriteLine();
 
+            var key = "nbysizxe";
+            Console.WriteLine("Day 14:");
+            Console.WriteLine($"Task1: {Day14.Task1(key)}");
+            Console.WriteLine($"Task2: {Day14.Task2(key)}");
+            Console.WriteLine();
+
             var danceMoves = File
                .ReadAllText("Day16.txt");
             Console.WriteLine("Day 16:");

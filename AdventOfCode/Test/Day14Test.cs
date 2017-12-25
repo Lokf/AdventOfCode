@@ -17,6 +17,7 @@ namespace Test
         [TestMethod]
         public void Task2()
         {
+            Assert.AreEqual(1242, Day14.Task2("flqrgnkx"));
         }
     }
 }
