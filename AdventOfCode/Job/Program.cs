@@ -129,6 +129,11 @@ namespace Job
             Console.WriteLine($"Task2: {Day16.Task2(16, danceMoves, 1_000_000_000)}");
             Console.WriteLine();
 
+            Console.WriteLine("Day 17:");
+            Console.WriteLine($"Task1: {Day17.Task1(335)}");
+            Console.WriteLine($"Task2: {Day17.Task2(335)}");
+            Console.WriteLine();
+
             var instructions2 = File
                .ReadAllLines("Day18.txt")
                .ToArray();
