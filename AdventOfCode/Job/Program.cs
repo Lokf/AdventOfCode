@@ -142,6 +142,22 @@ namespace Job
             Console.WriteLine($"Task2: {Day18.Task2(instructions2)}");
             Console.WriteLine();
 
+            var routingDiagram = File
+               .ReadAllLines("Day19.txt")
+               .ToArray();
+            Console.WriteLine("Day 19:");
+            Console.WriteLine($"Task1: {Day19.Task1(routingDiagram)}");
+            Console.WriteLine($"Task2: {Day19.Task2(routingDiagram)}");
+            Console.WriteLine();
+
+            var particles = File
+               .ReadAllLines("Day20.txt")
+               .ToArray();
+            Console.WriteLine("Day 20:");
+            Console.WriteLine($"Task1: {Day20.Task1(particles)}");
+            Console.WriteLine($"Task2: {Day20.Task2(particles)}");
+            Console.WriteLine();
+
             Console.ReadLine();
         }
     }
