@@ -17,7 +17,7 @@ namespace Job
             //Console.WriteLine($"Task 1: {Day01.Task1(captha)}");
             //Console.WriteLine($"Task 2: {Day01.Task2(captha)}");
             //Console.WriteLine();
-            
+
             //var speadsheet = File
             //    .ReadAllLines("Day02.txt")
             //    .ToList();
@@ -158,12 +158,20 @@ namespace Job
             //Console.WriteLine($"Task2: {Day20.Task2(particles)}");
             //Console.WriteLine();
 
-            var rules = File
-               .ReadAllLines("Day21.txt")
+            //var rules = File
+            //   .ReadAllLines("Day21.txt")
+            //   .ToArray();
+            //Console.WriteLine("Day 21:");
+            //Console.WriteLine($"Task1: {Day21.Task1(rules, 5)}");
+            //Console.WriteLine($"Task2: {Day21.Task1(rules, 18)}");
+            //Console.WriteLine();
+
+            var rows = File
+               .ReadAllLines("Day22.txt")
                .ToArray();
-            Console.WriteLine("Day 21:");
-            Console.WriteLine($"Task1: {Day21.Task1(rules, 5)}");
-            Console.WriteLine($"Task2: {Day21.Task1(rules, 18)}");
+            Console.WriteLine("Day 22:");
+            Console.WriteLine($"Task1: {Day22.Task1(rows, 10_000)}");
+            Console.WriteLine($"Task2: {Day22.Task2(rows, 10_000_000)}");
             Console.WriteLine();
 
             Console.ReadLine();
