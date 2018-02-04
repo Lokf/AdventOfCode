@@ -166,12 +166,20 @@ namespace Job
             //Console.WriteLine($"Task2: {Day21.Task1(rules, 18)}");
             //Console.WriteLine();
 
-            var rows = File
-               .ReadAllLines("Day22.txt")
+            //var rows = File
+            //   .ReadAllLines("Day22.txt")
+            //   .ToArray();
+            //Console.WriteLine("Day 22:");
+            //Console.WriteLine($"Task1: {Day22.Task1(rows, 10_000)}");
+            //Console.WriteLine($"Task2: {Day22.Task2(rows, 10_000_000)}");
+            //Console.WriteLine();
+
+            var instructions3 = File
+               .ReadAllLines("Day23.txt")
                .ToArray();
-            Console.WriteLine("Day 22:");
-            Console.WriteLine($"Task1: {Day22.Task1(rows, 10_000)}");
-            Console.WriteLine($"Task2: {Day22.Task2(rows, 10_000_000)}");
+            Console.WriteLine("Day 23:");
+            Console.WriteLine($"Task1: {Day23.Task1(instructions3)}");
+            Console.WriteLine($"Task2: {Day23.Task2(instructions3)}");
             Console.WriteLine();
 
             Console.ReadLine();
