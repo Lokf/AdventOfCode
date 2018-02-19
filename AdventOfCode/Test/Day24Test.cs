@@ -30,7 +30,7 @@ namespace Test
         public void Task2()
         {
             var components = new string[]
-{
+            {
                 "0/2",
                 "2/2",
                 "2/3",
@@ -39,7 +39,7 @@ namespace Test
                 "0/1",
                 "10/1",
                 "9/10"
-};
+            };
 
             Assert.AreEqual(19, Day24.Task2(components));
         }
