@@ -1,4 +1,4 @@
-﻿using AdventOfCode;
+﻿using AdventOfCode._2017;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -13,14 +13,14 @@ namespace Job
             Console.WriteLine("Advent of Code!");
 
             var captha = File.
-                ReadAllText("Day01.txt");
+                ReadAllText(@"2017\Day01.txt");
             Console.WriteLine("Day 1:");
             Console.WriteLine($"Task 1: {Day01.Task1(captha)}");
             Console.WriteLine($"Task 2: {Day01.Task2(captha)}");
             Console.WriteLine();
 
             var speadsheet = File
-                .ReadAllLines("Day02.txt")
+                .ReadAllLines(@"2017\Day02.txt")
                 .ToList();
             Console.WriteLine("Day 2:");
             Console.WriteLine($"Task1: {Day02.Task1(speadsheet)}");
@@ -34,7 +34,7 @@ namespace Job
             Console.WriteLine();
 
             var passphrases = File
-                .ReadAllLines("Day04.txt")
+                .ReadAllLines(@"2017\Day04.txt")
                 .ToList();
             Console.WriteLine("Day 4:");
             Console.WriteLine($"Task1: {Day04.Task1(passphrases)}");
@@ -42,7 +42,7 @@ namespace Job
             Console.WriteLine();
 
             var jumpOffsets = File
-                .ReadAllLines("Day05.txt")
+                .ReadAllLines(@"2017\Day05.txt")
                 .ToList();
             Console.WriteLine("Day 5:");
             Console.WriteLine($"Task1: {Day05.Task1(jumpOffsets)}");
@@ -56,7 +56,7 @@ namespace Job
             Console.WriteLine();
 
             var towers = File
-                .ReadAllLines("Day07.txt")
+                .ReadAllLines(@"2017\Day07.txt")
                 .ToList();
             Console.WriteLine("Day 7:");
             Console.WriteLine($"Task1: {Day07.Task1(towers)}");
@@ -64,7 +64,7 @@ namespace Job
             Console.WriteLine();
 
             var instructions = File
-               .ReadAllLines("Day08.txt")
+               .ReadAllLines(@"2017\Day08.txt")
                .ToList();
             Console.WriteLine("Day 8:");
             Console.WriteLine($"Task1: {Day08.Task1(instructions)}");
@@ -72,7 +72,7 @@ namespace Job
             Console.WriteLine();
 
             var stream = File
-               .ReadAllText("Day09.txt");
+               .ReadAllText(@"2017\Day09.txt");
             Console.WriteLine("Day 9:");
             Console.WriteLine($"Task1: {Day09.Task1(stream)}");
             Console.WriteLine($"Task2: {Day09.Task2(stream)}");
@@ -89,7 +89,7 @@ namespace Job
             Console.WriteLine();
 
             var path = File
-               .ReadAllText("Day11.txt")
+               .ReadAllText(@"2017\Day11.txt")
                .Split(',')
                .ToList();
             Console.WriteLine("Day 11:");
@@ -98,7 +98,7 @@ namespace Job
             Console.WriteLine();
 
             var pipes = File
-               .ReadAllLines("Day12.txt")
+               .ReadAllLines(@"2017\Day12.txt")
                .ToList();
             Console.WriteLine("Day 12:");
             Console.WriteLine($"Task1: {Day12.Task1(pipes)}");
@@ -106,7 +106,7 @@ namespace Job
             Console.WriteLine();
 
             var layers = File
-               .ReadAllLines("Day13.txt")
+               .ReadAllLines(@"2017\Day13.txt")
                .ToList();
             Console.WriteLine("Day 13:");
             Console.WriteLine($"Task1: {Day13.Task1(layers)}");
@@ -125,7 +125,7 @@ namespace Job
             Console.WriteLine();
 
             var danceMoves = File
-               .ReadAllText("Day16.txt");
+               .ReadAllText(@"2017\Day16.txt");
             Console.WriteLine("Day 16:");
             Console.WriteLine($"Task1: {Day16.Task1(16, danceMoves)}");
             Console.WriteLine($"Task2: {Day16.Task2(16, danceMoves, 1_000_000_000)}");
@@ -137,7 +137,7 @@ namespace Job
             Console.WriteLine();
 
             var instructions2 = File
-               .ReadAllLines("Day18.txt")
+               .ReadAllLines(@"2017\Day18.txt")
                .ToArray();
             Console.WriteLine("Day 18:");
             Console.WriteLine($"Task1: {Day18.Task1(instructions2)}");
@@ -145,7 +145,7 @@ namespace Job
             Console.WriteLine();
 
             var routingDiagram = File
-               .ReadAllLines("Day19.txt")
+               .ReadAllLines(@"2017\Day19.txt")
                .ToArray();
             Console.WriteLine("Day 19:");
             Console.WriteLine($"Task1: {Day19.Task1(routingDiagram)}");
@@ -153,7 +153,7 @@ namespace Job
             Console.WriteLine();
 
             var particles = File
-               .ReadAllLines("Day20.txt")
+               .ReadAllLines(@"2017\Day20.txt")
                .ToArray();
             Console.WriteLine("Day 20:");
             Console.WriteLine($"Task1: {Day20.Task1(particles)}");
@@ -161,7 +161,7 @@ namespace Job
             Console.WriteLine();
 
             var rules = File
-               .ReadAllLines("Day21.txt")
+               .ReadAllLines(@"2017\Day21.txt")
                .ToArray();
             Console.WriteLine("Day 21:");
             Console.WriteLine($"Task1: {Day21.Task1(rules, 5)}");
@@ -169,7 +169,7 @@ namespace Job
             Console.WriteLine();
 
             var rows = File
-               .ReadAllLines("Day22.txt")
+               .ReadAllLines(@"2017\Day22.txt")
                .ToArray();
             Console.WriteLine("Day 22:");
             Console.WriteLine($"Task1: {Day22.Task1(rows, 10_000)}");
@@ -177,7 +177,7 @@ namespace Job
             Console.WriteLine();
 
             var instructions3 = File
-               .ReadAllLines("Day23.txt")
+               .ReadAllLines(@"2017\Day23.txt")
                .ToArray();
             Console.WriteLine("Day 23:");
             Console.WriteLine($"Task1: {Day23.Task1(instructions3)}");
@@ -185,7 +185,7 @@ namespace Job
             Console.WriteLine();
 
             var components = File
-               .ReadAllLines("Day24.txt")
+               .ReadAllLines(@"2017\Day24.txt")
                .ToArray();
             Console.WriteLine("Day 24:");
             Console.WriteLine($"Task1: {Day24.Task1(components)}");
@@ -193,13 +193,20 @@ namespace Job
             Console.WriteLine();
 
             var blueprint = File
-               .ReadAllLines("Day25.txt")
+               .ReadAllLines(@"2017\Day25.txt")
                .ToArray();
             Console.WriteLine("Day 25:");
             Console.WriteLine($"Task1: {Day25.Task1(blueprint)}");
             Console.WriteLine($"Task2: {Day25.Task2(blueprint)}");
             Console.WriteLine();
 
+            var frequencyChanges = File
+                .ReadAllLines(@"2018\Day01.txt")
+                .Select(int.Parse)
+                .ToList();
+            Console.WriteLine("Day 01:");
+            Console.WriteLine($"Task1: {AdventOfCode._2018.Day01.Task1(frequencyChanges)}");
+            Console.WriteLine($"Task2: {AdventOfCode._2018.Day01.Task2(frequencyChanges)}");
             Console.ReadLine();
         }
     }
