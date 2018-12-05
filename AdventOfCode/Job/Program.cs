@@ -217,12 +217,19 @@ namespace Job
             //Console.WriteLine($"Task2: {AdventOfCode._2018.Day02.Task2(boxIds)}");
             //Console.ReadLine();
 
-            var claims = File
-                .ReadAllLines(@"2018\Day03.txt")
-                .ToList();
-            Console.WriteLine("Day 03:");
-            Console.WriteLine($"Task1: {AdventOfCode._2018.Day03.Task1(claims)}");
-            Console.WriteLine($"Task2: {AdventOfCode._2018.Day03.Task2(claims)}");
+            //var claims = File
+            //    .ReadAllLines(@"2018\Day03.txt")
+            //    .ToList();
+            //Console.WriteLine("Day 03:");
+            //Console.WriteLine($"Task1: {AdventOfCode._2018.Day03.Task1(claims)}");
+            //Console.WriteLine($"Task2: {AdventOfCode._2018.Day03.Task2(claims)}");
+
+            var logRecords = File
+              .ReadAllLines(@"2018\Day04.txt")
+              .ToList();
+            Console.WriteLine("Day 04:");
+            Console.WriteLine($"Task1: {AdventOfCode._2018.Day04.Task1(logRecords)}");
+            Console.WriteLine($"Task2: {AdventOfCode._2018.Day04.Task2(logRecords)}");
 
             Console.ReadLine();
         }
