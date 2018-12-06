@@ -231,12 +231,19 @@ namespace Job
             //Console.WriteLine($"Task1: {AdventOfCode._2018.Day04.Task1(logRecords)}");
             //Console.WriteLine($"Task2: {AdventOfCode._2018.Day04.Task2(logRecords)}");
 
-            var polymer = File
-              .ReadAllText(@"2018\Day05.txt");
+            //var polymer = File
+            //  .ReadAllText(@"2018\Day05.txt");
 
-            Console.WriteLine("Day 05:");
-            Console.WriteLine($"Task1: {AdventOfCode._2018.Day05.Task1(polymer)}");
-            Console.WriteLine($"Task2: {AdventOfCode._2018.Day05.Task2(polymer)}");
+            //Console.WriteLine("Day 05:");
+            //Console.WriteLine($"Task1: {AdventOfCode._2018.Day05.Task1(polymer)}");
+            //Console.WriteLine($"Task2: {AdventOfCode._2018.Day05.Task2(polymer)}");
+
+            var coordinates = File
+              .ReadAllLines(@"2018\Day06.txt");
+
+            Console.WriteLine("Day 06:");
+            Console.WriteLine($"Task1: {AdventOfCode._2018.Day06.Task1(coordinates)}");
+            Console.WriteLine($"Task2: {AdventOfCode._2018.Day06.Task2(coordinates, 10_000)}");
 
             Console.ReadLine();
         }
