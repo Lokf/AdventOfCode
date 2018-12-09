@@ -253,14 +253,21 @@ namespace Job
             //Console.WriteLine($"Task1: {AdventOfCode._2018.Day07.Task1(instructions)}");
             //Console.WriteLine($"Task2: {AdventOfCode._2018.Day07.Task2(instructions, 5, 60)}");
 
-            var tree = File
-                .ReadAllText(@"2018\Day08.txt")
-                .Split(' ')
-                .Select(int.Parse);
+            //var tree = File
+            //    .ReadAllText(@"2018\Day08.txt")
+            //    .Split(' ')
+            //    .Select(int.Parse);
 
-            Console.WriteLine("Day 08:");
-            Console.WriteLine($"Task1: {AdventOfCode._2018.Day08.Task1(tree)}");
-            Console.WriteLine($"Task2: {AdventOfCode._2018.Day08.Task2(tree)}");
+            //Console.WriteLine("Day 08:");
+            //Console.WriteLine($"Task1: {AdventOfCode._2018.Day08.Task1(tree)}");
+            //Console.WriteLine($"Task2: {AdventOfCode._2018.Day08.Task2(tree)}");
+
+            var gameInput = File
+                .ReadAllText(@"2018\Day09.txt");
+
+            Console.WriteLine("Day 09:");
+            Console.WriteLine($"Task1: {AdventOfCode._2018.Day09.Task1(gameInput)}");
+            Console.WriteLine($"Task2: {AdventOfCode._2018.Day09.Task2(gameInput)}");
 
             Console.ReadLine();
         }

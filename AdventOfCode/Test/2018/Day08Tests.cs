@@ -1,8 +1,6 @@
 ﻿using AdventOfCode._2018;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace Test._2018
 {
@@ -59,6 +57,6 @@ namespace Test._2018
             };
 
             Assert.AreEqual(66, Day08.Task2(tree));
-        }        
+        }
     }
 }
