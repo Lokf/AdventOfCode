@@ -238,12 +238,29 @@ namespace Job
             //Console.WriteLine($"Task1: {AdventOfCode._2018.Day05.Task1(polymer)}");
             //Console.WriteLine($"Task2: {AdventOfCode._2018.Day05.Task2(polymer)}");
 
-            var coordinates = File
-              .ReadAllLines(@"2018\Day06.txt");
+            //var coordinates = File
+            //  .ReadAllLines(@"2018\Day06.txt");
 
-            Console.WriteLine("Day 06:");
-            Console.WriteLine($"Task1: {AdventOfCode._2018.Day06.Task1(coordinates)}");
-            Console.WriteLine($"Task2: {AdventOfCode._2018.Day06.Task2(coordinates, 10_000)}");
+            //Console.WriteLine("Day 06:");
+            //Console.WriteLine($"Task1: {AdventOfCode._2018.Day06.Task1(coordinates)}");
+            //Console.WriteLine($"Task2: {AdventOfCode._2018.Day06.Task2(coordinates, 10_000)}");
+
+
+            //var instructions = File
+            //  .ReadAllLines(@"2018\Day07.txt");
+
+            //Console.WriteLine("Day 07:");
+            //Console.WriteLine($"Task1: {AdventOfCode._2018.Day07.Task1(instructions)}");
+            //Console.WriteLine($"Task2: {AdventOfCode._2018.Day07.Task2(instructions, 5, 60)}");
+
+            var tree = File
+                .ReadAllText(@"2018\Day08.txt")
+                .Split(' ')
+                .Select(int.Parse);
+
+            Console.WriteLine("Day 08:");
+            Console.WriteLine($"Task1: {AdventOfCode._2018.Day08.Task1(tree)}");
+            Console.WriteLine($"Task2: {AdventOfCode._2018.Day08.Task2(tree)}");
 
             Console.ReadLine();
         }

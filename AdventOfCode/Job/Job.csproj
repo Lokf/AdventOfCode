@@ -20,6 +20,8 @@
     <None Remove="2018\Day04.txt" />
     <None Remove="2018\Day05.txt" />
     <None Remove="2018\Day06.txt" />
+    <None Remove="2018\Day07.txt" />
+    <None Remove="2018\Day08.txt" />
     <None Remove="Day01.txt" />
     <None Remove="Day11.txt" />
     <None Remove="Day12.txt" />
@@ -36,6 +38,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="2018\Day08.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="2018\Day07.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="2018\Day06.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
