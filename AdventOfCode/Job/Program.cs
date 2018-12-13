@@ -278,10 +278,16 @@ namespace Job
             //AdventOfCode._2018.Day10.Print(message);
             //Console.WriteLine($"Task2: {AdventOfCode._2018.Day10.Task2(points)}");
 
-            Console.WriteLine("Day 11:");
-            Console.WriteLine($"Task1: {AdventOfCode._2018.Day11.Task1(7857)}");
-            Console.WriteLine($"Task2: {AdventOfCode._2018.Day11.Task2(7857)}");
+            //Console.WriteLine("Day 11:");
+            //Console.WriteLine($"Task1: {AdventOfCode._2018.Day11.Task1(7857)}");
+            //Console.WriteLine($"Task2: {AdventOfCode._2018.Day11.Task2(7857)}");
 
+            var plantConfiguration = File
+                .ReadAllLines(@"2018\Day12.txt");
+
+            Console.WriteLine("Day 12:");
+            Console.WriteLine($"Task1: {AdventOfCode._2018.Day12.Task1(plantConfiguration)}");
+            Console.WriteLine($"Task2: {AdventOfCode._2018.Day12.Task2(plantConfiguration)}");
 
             Console.ReadLine();
         }
