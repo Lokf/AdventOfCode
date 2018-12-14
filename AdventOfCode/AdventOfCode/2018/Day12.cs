@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace AdventOfCode._2018
 {
@@ -45,7 +43,7 @@ namespace AdventOfCode._2018
                 generation++;
             }
         }
-    
+
         private static Pot ParseInitialState(string initialState)
         {
             var pot0 = Pot.LeftmostPot(0, initialState[15] == '#');
@@ -62,7 +60,7 @@ namespace AdventOfCode._2018
         private static Dictionary<byte, bool> ParseSpreadRules(IEnumerable<string> spreadRules)
         {
             return spreadRules.ToDictionary(
-                spreadRule => CalculateSpreadKey(spreadRule.Select(c => c == '#').Take(5)), 
+                spreadRule => CalculateSpreadKey(spreadRule.Select(c => c == '#').Take(5)),
                 spreadRule => spreadRule[9] == '#');
         }
 
@@ -75,7 +73,7 @@ namespace AdventOfCode._2018
 
         private static Pot NextGeneration(Pot leftmostPot, Dictionary<byte, bool> spreadRules)
         {
-            var runningPattern = new Queue<bool>(new bool[] { false, false, false, false});
+            var runningPattern = new Queue<bool>(new bool[] { false, false, false, false });
 
             var index = leftmostPot.Index - 2;
             var currentPotPreviousGeneration = leftmostPot;
@@ -95,23 +93,23 @@ namespace AdventOfCode._2018
                     runningPattern.Enqueue(false);
                     if (numberOfPotsRemainingToGenerate.HasValue)
                     {
-                        numberOfPotsRemainingToGenerate--;                        
+                        numberOfPotsRemainingToGenerate--;
                     }
                     else
                     {
                         numberOfPotsRemainingToGenerate = 3;
-                    }                    
+                    }
                 }
                 else
                 {
                     runningPattern.Enqueue(currentPotPreviousGeneration.HasPlant);
                     currentPotPreviousGeneration = currentPotPreviousGeneration.PotToTheRight;
                 }
-                
+
                 var spreadKey = CalculateSpreadKey(runningPattern);
                 spreadRules.TryGetValue(spreadKey, out var hasPlant);
                 if (currentPotNextGeneration == null)
-                {  
+                {
                     currentPotNextGeneration = Pot.LeftmostPot(index, hasPlant);
                     leftmostPotNextGeneration = currentPotNextGeneration;
                 }
@@ -120,13 +118,13 @@ namespace AdventOfCode._2018
                     currentPotNextGeneration = currentPotNextGeneration.AddToTheRight(hasPlant);
                 }
 
-                index++;                
+                index++;
                 runningPattern.Dequeue();
             }
         }
 
         private class Pot
-        { 
+        {
             public int Index { get; }
             public bool HasPlant { get; }
             public Pot PotToTheRight { get; private set; }

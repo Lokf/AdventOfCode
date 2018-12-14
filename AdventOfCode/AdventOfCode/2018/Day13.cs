@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace AdventOfCode._2018
 {
@@ -53,7 +52,7 @@ namespace AdventOfCode._2018
 
                     if (IsCollisison(carts.Select(c => c.Position)))
                     {
-                        carts = carts.Where(c => c.Position != newPosition).ToList();                        
+                        carts = carts.Where(c => c.Position != newPosition).ToList();
                     }
                 }
             }
@@ -216,7 +215,7 @@ namespace AdventOfCode._2018
                 { ('>', '/'), '^' },
             };
 
-            public Position Position { get; private set; }       
+            public Position Position { get; private set; }
             private char direction;
             private IntersectionChoice intersectionChoice;
 
@@ -301,7 +300,7 @@ namespace AdventOfCode._2018
 
             public override bool Equals(object obj)
             {
-                return Equals(obj as Position); 
+                return Equals(obj as Position);
             }
 
             public override int GetHashCode()
@@ -345,6 +344,6 @@ namespace AdventOfCode._2018
             {
                 return !(obj1 == obj2);
             }
-        }        
+        }
     }
 }
