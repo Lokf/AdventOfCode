@@ -301,12 +301,21 @@ namespace Job
             //Console.WriteLine($"Task1: {AdventOfCode._2018.Day14.Task1(556061)}");
             //Console.WriteLine($"Task2: {AdventOfCode._2018.Day14.Task2("556061")}");
 
-            var initialState = File
-                .ReadAllLines(@"2018\Day15.txt");
+            //var initialState = File
+            //    .ReadAllLines(@"2018\Day15.txt");
 
-            Console.WriteLine("Day 15:");
-            Console.WriteLine($"Task1: {AdventOfCode._2018.Day15.Task1(initialState)}");
-            Console.WriteLine($"Task2: {AdventOfCode._2018.Day15.Task2(initialState)}");
+            //Console.WriteLine("Day 15:");
+            //Console.WriteLine($"Task1: {AdventOfCode._2018.Day15.Task1(initialState)}");
+            //Console.WriteLine($"Task2: {AdventOfCode._2018.Day15.Task2(initialState)}");
+            //Console.ReadLine();
+
+
+            var input = File
+                .ReadAllLines(@"2018\Day16.txt");
+
+            Console.WriteLine("Day 16:");
+            Console.WriteLine($"Task1: {AdventOfCode._2018.Day16.Task1(input)}");
+            Console.WriteLine($"Task2: {AdventOfCode._2018.Day16.Task2(input)}");
             Console.ReadLine();
         }
     }
