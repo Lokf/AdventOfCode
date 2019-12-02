@@ -12,7 +12,7 @@ module Day01 =
         
 
     let path = System.IO.Path.Combine(__SOURCE_DIRECTORY__, "day01.txt")
-    let masses = Input.readInts path
+    let masses = Input.readIntsFromLines path
     let puzzle1 =
         masses
         |> List.map(fun(x) -> fuelRequired x)
