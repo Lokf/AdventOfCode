@@ -26,7 +26,23 @@ module Day03 =
             let (lineNodes, x, y) =  walkLine direction distance x y Set.empty
             nodes + lineNodes + walkPath tail x y Set.empty
 
-    let path = System.IO.Path.Combine(__SOURCE_DIRECTORY__, "day02.txt")
+    let parseDirection char =
+        match char with
+        | 'U' -> Up
+        | 'D' -> Down
+        | 'R' -> Right
+        | 'L' -> Left
+        | _ -> raise (System.Exception())
 
+    let parseLeg (leg: string) =
+        Leg(parseDirection (leg.[0]), leg.[1..] |> int)
+
+    let rec parseLegs legs =
+        match legs with
+        | [] -> []
+        | head::tail -> parseLeg head::parseLegs tail
+    let path = System.IO.Path.Combine(__SOURCE_DIRECTORY__, "day03.txt")
+    let circuits = 
+        System.IO.File.ReadAllLines(path)
             
 
