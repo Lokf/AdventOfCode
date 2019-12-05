@@ -42,7 +42,23 @@ module Day03 =
         | [] -> []
         | head::tail -> parseLeg head::parseLegs tail
     let path = System.IO.Path.Combine(__SOURCE_DIRECTORY__, "day03.txt")
-    let circuits = 
-        System.IO.File.ReadAllLines(path)
+
+    let input = System.IO.File.ReadAllLines(path)
+
+    //let input = [ "R8,U5,L5,D3";  "U7,R6,D4,L4" ]
+    let wire1 = parseLegs (input.[0].Split(',') |> List.ofArray)
+    let wire2 = parseLegs (input.[1].Split(',') |> List.ofArray)
+
+    let nodes1 = walkPath wire1 0 0 Set.empty
+    let nodes2 = walkPath wire2 0 0 Set.empty
+
+    let manhattanDistance (x, y) =
+        abs x + abs y
+
+
+
+    let intersect = Set.intersect nodes1 nodes2
+    let puzzle1 = intersect |> List.ofSeq |> List.map manhattanDistance |> List.sort |> List.item 1
+
             
 
