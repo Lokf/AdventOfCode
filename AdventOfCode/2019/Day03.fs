@@ -7,24 +7,43 @@ module Day03 =
         | Right
         | Left
 
-    type Node = (int * int)
+    type Position = (int * int)
 
     type Leg = (Direction * int)
 
-    let rec walkLine direction distance x y (nodes: Set<Node>) =
-        match (direction, distance) with
-        | _, 0 -> (nodes, x, y)
-        | Up, _ -> walkLine direction (distance - 1) x (y + 1) (nodes.Add(x, y))
-        | Down, _ -> walkLine direction (distance - 1) x (y - 1) (nodes.Add(x, y))
-        | Right, _ -> walkLine direction (distance - 1) (x + 1) y (nodes.Add(x, y))
-        | Left, _ -> walkLine direction (distance - 1) (x - 1) y (nodes.Add(x, y))
+    //let merge (a : Map<Position, int>) (b : Map<Position, int>) =
+    //    Map.fold (fun s k v ->
+    //        match Map.tryFind k s with
+    //        | Some v' -> Map.add k (min v, v') s
+    //        | _ -> s) a b
+    
+    let merge (a : Map<'a, 'b>) (b : Map<'a, 'b>) (f : 'a -> 'b * 'b -> 'b) =
+        Map.fold (fun s k v ->
+            match Map.tryFind k s with
+            | Some v' -> Map.add k (f k (v, v')) s
+            | None -> Map.add k v s) a b
+    
+    let mergePosition (a : Map<Position, int>) (b : Map<Position, int>) =
+        merge a b (fun _ (v, v') -> min v  v')
 
-    let rec walkPath legs x y (nodes: Set<Node>) =
+    let manhattanDistance (x, y) =
+        abs x + abs y
+
+    let rec walkLine direction distance x y (positions: Map<Position, int>) =
+        match (direction, distance) with
+        | _, 0 -> (positions, x, y)
+        | Up, _ -> walkLine direction (distance - 1) x (y + 1) (positions.Add((x, y), (manhattanDistance (x, y))))
+        | Down, _ -> walkLine direction (distance - 1) x (y - 1) (positions.Add((x, y), (manhattanDistance (x, y))))
+        | Right, _ -> walkLine direction (distance - 1) (x + 1) y (positions.Add((x, y), (manhattanDistance (x, y))))
+        | Left, _ -> walkLine direction (distance - 1) (x - 1) y (positions.Add((x, y), (manhattanDistance (x, y))))
+
+    let rec walkPath legs x y (positions: Map<Position, int>) =
         match legs with 
-        | [] -> nodes
+        | [] -> positions
         | (direction, distance)::tail ->
-            let (lineNodes, x, y) =  walkLine direction distance x y Set.empty
-            nodes + lineNodes + walkPath tail x y Set.empty
+            let (linePositions, x, y) =  walkLine direction distance x y Map.empty
+            let a = mergePosition linePositions positions
+            mergePosition a (walkPath tail x y Map.empty)
 
     let parseDirection char =
         match char with
@@ -49,15 +68,15 @@ module Day03 =
     let wire1 = parseLegs (input.[0].Split(',') |> List.ofArray)
     let wire2 = parseLegs (input.[1].Split(',') |> List.ofArray)
 
-    let nodes1 = walkPath wire1 0 0 Set.empty
-    let nodes2 = walkPath wire2 0 0 Set.empty
+    let positions1 = walkPath wire1 0 0 Set.empty
+    let positions2 = walkPath wire2 0 0 Set.empty
 
-    let manhattanDistance (x, y) =
-        abs x + abs y
+    //let manhattanDistance (x, y) =
+    //    abs x + abs y
 
 
 
-    let intersect = Set.intersect nodes1 nodes2
+    let intersect = Set.intersect positions1 positions2
     let puzzle1 = intersect |> List.ofSeq |> List.map manhattanDistance |> List.sort |> List.item 1
 
             
