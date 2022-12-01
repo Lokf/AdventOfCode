@@ -68,16 +68,16 @@ module Day03 =
     let wire1 = parseLegs (input.[0].Split(',') |> List.ofArray)
     let wire2 = parseLegs (input.[1].Split(',') |> List.ofArray)
 
-    let positions1 = walkPath wire1 0 0 Set.empty
-    let positions2 = walkPath wire2 0 0 Set.empty
+    //let positions1 = walkPath wire1 0 0 Set.empty
+    //let positions2 = walkPath wire2 0 0 Set.empty
 
-    //let manhattanDistance (x, y) =
-    //    abs x + abs y
+    ////let manhattanDistance (x, y) =
+    ////    abs x + abs y
 
 
 
-    let intersect = Set.intersect positions1 positions2
-    let puzzle1 = intersect |> List.ofSeq |> List.map manhattanDistance |> List.sort |> List.item 1
+    //let intersect = Set.intersect positions1 positions2
+    //let puzzle1 = intersect |> List.ofSeq |> List.map manhattanDistance |> List.sort |> List.item 1
 
             
 
