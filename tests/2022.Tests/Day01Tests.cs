@@ -1,6 +1,4 @@
-﻿using FluentAssertions;
-
-namespace Lokf.AdventOfCode2022.Tests;
+﻿namespace Lokf.AdventOfCode2022.Tests;
 
 public sealed class Day01Tests
 {
