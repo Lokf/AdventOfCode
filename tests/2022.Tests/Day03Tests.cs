@@ -6,7 +6,7 @@ public sealed class Day03Tests
     public void Task1()
     {
         var input = File
-            .ReadAllLines(@"Day03Input.txt")
+            .ReadAllLines("Day03Input.txt")
             .ToList();
 
         var result = Day03.Task1(input);
@@ -18,7 +18,7 @@ public sealed class Day03Tests
     public void Task2()
     {
         var input = File
-            .ReadAllLines(@"Day03Input.txt")
+            .ReadAllLines("Day03Input.txt")
             .ToList();
 
         var result = Day03.Task2(input);
