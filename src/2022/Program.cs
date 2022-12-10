@@ -52,3 +52,14 @@ var input9 = File
     .ToList();
 Console.WriteLine($"Day 9, Task 1: {Day09.Task1(input9)}");
 Console.WriteLine($"Day 9, Task 2: {Day09.Task2(input9)}");
+
+var input10 = File
+    .ReadAllLines("Day10Input.txt")
+    .ToList();
+Console.WriteLine($"Day 10, Task 1: {Day10.Task1(input10)}");
+var output = Day10.Task2(input10);
+Console.WriteLine("Day 10, Task 2:");
+foreach (var row in output)
+{
+    Console.WriteLine(row);
+}

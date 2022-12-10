@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-
-namespace Lokf.AdventOfCode2022;
+﻿namespace Lokf.AdventOfCode2022;
 
 public static partial class Day09
 {
