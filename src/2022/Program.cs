@@ -82,3 +82,9 @@ var input13 = File
     .ToList();
 Console.WriteLine($"Day 13, Task 1: {Day13.Task1(input13)}");
 Console.WriteLine($"Day 13, Task 2: {Day13.Task2(input13)}");
+
+var input14 = File
+    .ReadAllLines("Day14Input.txt")
+    .ToList();
+Console.WriteLine($"Day 14, Task 1: {Day14.Task1(input14)}");
+Console.WriteLine($"Day 14, Task 2: {Day14.Task2(input14)}");
